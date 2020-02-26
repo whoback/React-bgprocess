@@ -38,11 +38,26 @@ const LoadingMessage = () => (
 class DisplayEvent extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       success_progress: 0,
       warning_progress: 0,
-      danger_progres: 0
+      danger_progress: 0
     };
+  }
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.data.eventCreated.status === "success")
+      return {
+        success_progress: prevState.success_progress + 5
+      };
+    if (nextProps.data.eventCreated.status === "warning")
+      return {
+        warning_progress: prevState.warning_progress + 5
+      };
+    if (nextProps.data.eventCreated.status === "danger")
+      return {
+        danger_progress: prevState.danger_progress + 5
+      };
   }
 
   render() {
@@ -75,7 +90,7 @@ class DisplayEvent extends React.Component {
             striped
             animated
             variant="danger"
-            now={this.state.danger_progres}
+            now={this.state.danger_progress}
             key={3}
           />
         </ProgressBar>
