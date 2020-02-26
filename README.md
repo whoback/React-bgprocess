@@ -1,3 +1,25 @@
+## Scope: 
+Create a react/express/node app which uses a graphql websocket to display in real time the progress of an asynchronous backend process. 
+
+1. Initial render displays a start button
+1. When the start button is clicked:
+1. The start button disappears
+1. The UI renders a progress indicator that updates each time the backend makes progress 
+1. The backend process should
+1. Emit a start event 
+1. Emits a sequence of 20 progress events
+1. The events don't need to do any actual work.
+1. Each progress event should take a random amount of time that is greater than 1 second but less than 3 seconds to complete. 
+1. 5% of the events should randomly have their status set to "failed"
+1. Emit a finished event 
+1. The progress indicator should reflect details about the event. 
+1. Failed events should be red and successful events should be green.
+1. Each event should display the time it took for that event to complete.
+1. When the finished event is received, the UI should expose a button to restart the process.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
