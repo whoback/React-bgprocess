@@ -1,50 +1,22 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@apollo/client": "^3.0.0-beta.37",
-    "@apollo/link-ws": "^2.0.0-beta.3",
-    "@apollo/react-common": "^3.1.2",
-    "@apollo/react-components": "^3.1.2",
-    "@apollo/react-hoc": "^3.1.3",
-    "@apollo/react-hooks": "^3.1.2",
-    "@apollo/react-testing": "^3.1.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "animate.css": "^3.7.2",
-    "apollo-client": "^2.6.8",
-    "bootstrap": "^4.4.1",
-    "react": "^16.12.0",
-    "react-apollo": "^3.1.3",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-dom": "^16.12.0",
-    "react-notifications-component": "^2.3.0",
-    "react-scripts": "3.4.0",
-    "simple-react-notifications": "^1.2.15",
-    "subscriptions-transport-ws": "^0.9.16"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "proxy": "http://localhost:4000/",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "jordan-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@apollo/link-ws": "^2.0.0-beta.3",
+        "apollo-link": "^1.2.13",
+        "apollo-server-express": "^2.10.1",
+        "cors": "^2.8.5",
+        "graphql": "^14.6.0",
+        "node-cron": "^2.0.3",
+        "subscriptions-transport-ws": "^0.9.16",
+        "ws": "^7.2.1"
+    }
 }
