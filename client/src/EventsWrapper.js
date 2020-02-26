@@ -98,8 +98,8 @@ class DisplayEvent extends React.Component {
         <Alert variant={"primary"}>
           <p>This is a detailed view of the event process.</p>
           <p>
-            Process number: <b>{this.props.data.eventCreated.id}</b> has
-            finished in {this.props.data.eventCreated.time} seconds.
+            PID: <b>{this.props.data.eventCreated.id}</b> has finished in{" "}
+            {this.props.data.eventCreated.time} seconds.
           </p>
           <ul>
             <li>{this.props.data.eventCreated.content}</li>

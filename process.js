@@ -4,10 +4,21 @@ const PROGRESS_TYPE = "PROGRESS_TYPE";
 const START_ID = 999;
 const FINISH_ID = 1000;
 // generate a rand int. used to decide the time each event takes as well as which event will fail
-const getRndInteger = (min, max) => {
+const genRndInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+const genRndId = () => {
+  return (
+    Math.random()
+      .toString(36)
+      .substring(2, 15) +
+    Math.random()
+      .toString(36)
+      .substring(2, 15)
+  );
 };
 
 const createEvent = (pubsub, stream, id, type, status, ttl = 1) => {
@@ -49,11 +60,11 @@ module.exports.runProcess = (pubsub, stream) => {
   console.log("start event!");
 
   const doEvent = n => {
-    const ttl = getRndInteger(1, 3);
-
+    const ttl = genRndInt(1, 3);
+    const id = genRndId();
     if (n > 0) {
       setTimeout(function() {
-        createEvent(pubsub, stream, n, PROGRESS_TYPE, "success", ttl);
+        createEvent(pubsub, stream, id, PROGRESS_TYPE, "success", ttl);
         doEvent(n - 1);
       }, ttl * 1000);
     } else {
