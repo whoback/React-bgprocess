@@ -1,3 +1,22 @@
+## Install
+clone repo: 
+`git clone https://github.com/whoback/React-bgprocess.git`
+
+`cd React-bgprocess`
+
+Install server dependencies: 
+`npm install`
+
+Start server : `nodemon`
+
+`cd React-bgprocess/client`
+
+Install client dependencies:
+`npm install`
+
+Start server:
+`npm start`
+
 ## Scope: 
 Create a react/express/node app which uses a graphql websocket to display in real time the progress of an asynchronous backend process. 
 
